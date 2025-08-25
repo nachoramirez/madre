@@ -1,0 +1,123 @@
+body {
+  font-family: 'calibri';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+header {
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 200px;
+}
+
+header section {
+  grid-column: 1/11;
+  grid-row: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month {
+  font-size: 2.5em;
+}
+
+.info {
+  grid-column: 8/11;
+  width: 100%;
+  grid-row: 1;
+  text-align: right;
+}
+
+.days {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar {
+  padding: 0;
+  width: 70%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(50px, 1fr));
+  gap: 5px 5px;
+}
+
+.calendar__displayName {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.short {
+  display: none;
+  text-decoration: none;
+}
+
+.calendar__day {
+  cursor: pointer;
+  background-color: gray;
+  border: 1px black solid;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.weekend {
+  opacity: 70%;
+  cursor: not-allowed;
+}
+
+.office {
+  background-color: #00ff00;
+}
+
+.vacation {
+  background-color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    grid-template-rows: 170px;
+  }
+  header section {
+    grid-column: 1/5;
+    align-items: start;
+  }
+
+  .short {
+    display: inline;
+  }
+  .long {
+    display: none;
+  }
+  .days {
+    width: 100%;
+  }
+  .info {
+    grid-column: 6/11;
+    width: 100%;
+  }
+  .calendar {
+    width: 100%;
+  }
+}

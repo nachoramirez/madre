@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1 class="month">MES</h1>
+        <div>
+          <button onclick="prevMonth()">🢀</button>
+          <button onclick="nextMonth()">🢂</button>
+        </div>
+      </section>
+      <div class="info">
+        <h1 id="percentage">0 %</h1>
+        <h2 id="selected">0</h2>
+        <h2 id="ideal">x</h2>
+      </div>
+    </header>
+    <ul class="days">
+      <li class="calendar__displayName">
+        <span class="long">Domingo</span>
+        <abbr class="short" title="Domingo">Dom</abbr>
+      </li>
+      <li class="calendar__displayName">
+        <span class="long">Lunes</span>
+        <abbr class="short" title="Lunes">Lun</abbr>
+      </li>
+      <li class="calendar__displayName">
+        <span class="long">Martes</span>
+        <abbr class="short" title="Martes">Mar</abbr>
+      </li>
+      <li class="calendar__displayName">
+        <span class="long">Miércoles</span>
+        <abbr class="short" title="Miércoles">Mié</abbr>
+      </li>
+      <li class="calendar__displayName">
+        <span class="long">Jueves</span>
+        <abbr class="short" title="Jueves">Jue</abbr>
+      </li>
+      <li class="calendar__displayName">
+        <span class="long">Viernes</span>
+        <abbr class="short" title="Viernes">Vie</abbr>
+      </li>
+      <li class="calendar__displayName">
+        <span class="long">Sábado</span>
+        <abbr class="short" title="Sábado">Sáb</abbr>
+      </li>
+    </ul>
+    <ul class="calendar" id="calendar">
+      <li class="calendar__day hidden weekend" data-day="1">1</li>
+      <li class="calendar__day hidden weekend" data-day="2">2</li>
+      <li class="calendar__day hidden weekend" data-day="3">3</li>
+      <li class="calendar__day hidden weekend" data-day="4">4</li>
+      <li class="calendar__day hidden weekend" data-day="5">5</li>
+      <li class="calendar__day hidden weekend" data-day="6">6</li>
+      <li class="calendar__day hidden weekend" data-day="7">7</li>
+      <li class="calendar__day hidden weekend" data-day="8">8</li>
+      <li class="calendar__day hidden weekend" data-day="9">9</li>
+      <li class="calendar__day hidden weekend" data-day="10">10</li>
+      <li class="calendar__day hidden weekend" data-day="11">11</li>
+      <li class="calendar__day hidden weekend" data-day="12">12</li>
+      <li class="calendar__day hidden weekend" data-day="13">13</li>
+      <li class="calendar__day hidden weekend" data-day="14">14</li>
+      <li class="calendar__day hidden weekend" data-day="15">15</li>
+      <li class="calendar__day hidden weekend" data-day="16">16</li>
+      <li class="calendar__day hidden weekend" data-day="17">17</li>
+      <li class="calendar__day hidden weekend" data-day="18">18</li>
+      <li class="calendar__day hidden weekend" data-day="19">19</li>
+      <li class="calendar__day hidden weekend" data-day="20">20</li>
+      <li class="calendar__day hidden weekend" data-day="21">21</li>
+      <li class="calendar__day hidden weekend" data-day="22">22</li>
+      <li class="calendar__day hidden weekend" data-day="23">23</li>
+      <li class="calendar__day hidden weekend" data-day="24">24</li>
+      <li class="calendar__day hidden weekend" data-day="25">25</li>
+      <li class="calendar__day hidden weekend" data-day="26">26</li>
+      <li class="calendar__day hidden weekend" data-day="27">27</li>
+      <li class="calendar__day hidden weekend" data-day="28">28</li>
+      <li class="calendar__day hidden weekend" data-day="29">29</li>
+      <li class="calendar__day hidden weekend" data-day="30">30</li>
+      <li class="calendar__day hidden weekend" data-day="31">31</li>
+    </ul>
+  </body>
+  <script src="index.js"></script>
+</html>

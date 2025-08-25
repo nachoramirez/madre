@@ -144,8 +144,6 @@ const calculatePercentage = (workDays, officeDays) => {
 }
 
 const onClick = (event) => {
-  console.log('click')
-
   if (!event.target.classList.contains('vacation')) {
     if (event.target.classList.toggle('office')) {
       officeDays++
@@ -155,6 +153,10 @@ const onClick = (event) => {
       refreshIdeal()
     }
     calculatePercentage(workDays, officeDays)
+  } else {
+    event.target.classList.remove('vacation')
+    workDays++
+    refreshIdeal()
   }
 }
 
@@ -168,9 +170,13 @@ const onRightClick = (event) => {
       workDays++
       refreshIdeal()
     }
+  } else {
+    event.target.classList.remove('office')
+    officeDays--
+    refreshIdeal()
+    calculatePercentage(workDays, officeDays)
   }
 }
-
 
 function createEventListener(element) {
   element.forEach((day) => {
